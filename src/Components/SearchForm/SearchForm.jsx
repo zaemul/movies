@@ -28,8 +28,8 @@ export default class SearchForm extends Component {
       <Row>
         <Col span={14} offset={5}>
           <form onSubmit={this.handleSubmit}>
-            <Input className='input' placeholder='Search a film...' onChange={this.handleChange} />
-            <Button type="primary" icon="search" onClick={this.handleSubmit}>Search</Button>
+            <Input className='input' placeholder='영화제목을 입력해주세요' onChange={this.handleChange} />
+            <Button type="primary" icon="search" onClick={this.handleSubmit}>검색</Button>
           </form>
         </Col>
         {

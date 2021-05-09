@@ -11,18 +11,26 @@ type Props = {
   id: number
 }
 
-const CardTamplate = ({ name, date, vote, image, id }: Props) => (
+const CardTemplateStyle = {
+  title: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  }
+}
+
+const CardTemplate = ({ name, date, vote, image, id }: Props) => (
   <Link to={`/movie/${id}`}>
     <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
       <div className='custom-image'>
-        <img alt={name} width='100%' src={`https://image.tmdb.org/t/p/w500${image}`} />
+        <img alt={name} width='100%' height='350px' src={`https://image.tmdb.org/t/p/w500${image}`} />
       </div>
       <div className='custom-card'>
-        <h3>{name}</h3>
+        <h3 style={CardTemplateStyle.title}>{name}</h3>
         <p>{`Date: ${date} || Votes: ${vote}`}</p>
       </div>
     </Card>
   </Link>
 )
 
-export default CardTamplate
+export default CardTemplate

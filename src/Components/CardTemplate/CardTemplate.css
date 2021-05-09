@@ -4,6 +4,11 @@
 .custom-card {
   padding: 10px 16px;
 }
+.movie-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .custom-card p {
   color: #999;
 }
